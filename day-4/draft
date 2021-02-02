@@ -1,0 +1,46 @@
+// console.log(1)
+
+// // async
+// // var a = fs.readFile('filename.txt')
+
+// // a.then();
+
+// // newPromise = fs.readFile('filename.txt')
+// //   .then()
+  
+// console.log(2)
+
+
+
+
+
+// // ==, ===
+// // var, let, const     var (function scope)
+// //
+
+
+
+// function foo() {
+//   let b = 5;
+//   var a = 4;
+// }
+
+// foo();
+
+// // for(3)
+
+// {
+//   let i = 0;
+// }
+
+// {
+//   let i = 1;
+// }
+
+// {
+//   let i = 2;
+// }
+
+
+
+

@@ -1,0 +1,10 @@
+folder -> {}
+file -> true
+
+
+{
+  root: {
+    folder2: {}, // empty folder
+    'hello.txt': true
+  }
+}

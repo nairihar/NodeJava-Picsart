@@ -1,0 +1,11 @@
+{
+  root: {
+    folder2: {
+      asdas: true,
+      'file.txt': true,
+    },
+  },
+  root2: {
+    'something.js': Text,
+  }
+}
