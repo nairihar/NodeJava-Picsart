@@ -1,0 +1,8 @@
+**Scripts**
+
+- `npm start` prod mode ...
+- `npm run dev` run in dev mode ...
+
+
+ENV vars:
+- PORT (default 3000)
