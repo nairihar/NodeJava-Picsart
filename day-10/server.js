@@ -36,6 +36,7 @@ console.log('Server running!');
 
 
 // Homework CRUD Server (HTTP + Postman + nodemon)
+// Use only http module :: 'fs'(option)
 
 // POST createUsers
 // GET get All users
@@ -56,4 +57,6 @@ console.log('Server running!');
 // Search -> os
 
 // Use Http status codes(numbers)
+
+
 
