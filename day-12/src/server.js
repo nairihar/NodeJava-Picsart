@@ -1,54 +1,92 @@
-require('dotenv').config();
+// require('dotenv').config();
 
-const express = require('express')
-const morgan = require('morgan')
-const configs = require('./configs/configs');
+// const express = require('express')
+// const morgan = require('morgan')
+// const configs = require('./configs/configs');
 
-const server = express()
+// const server = express()
 
-const usersRoutes = require('./routes/users.routes');
-const photosRoutes = require('./routes/photos.routes');
+// const usersRoutes = require('./routes/users.routes');
+// const photosRoutes = require('./routes/photos.routes');
 
-// next('')
-// pipeline
+// // next('')
+// // pipeline
 
-// mid 1
-server.use(function(req, res, next) {
-  console.log(1)
-  next()
-})
 
-// mid 2
-server.use(function(req, res, next) {
-  console.log(2)
-  // next
-})
 
-// mid 2
-server.use(function(req, res, next) {
-  // next
-})
+// server.use(morgan('dev'));
+// server.use(express.json());
 
-// path
+// server.use(usersRoutes);//
+// server.use(photosRoutes);
+// // ..
 
-server.use(morgan('dev'));
-server.use(express.json());
+// // path
+// server.use(function(req, res, next) {
+//   res.json({ error: 404 })
+// })
 
-server.use(usersRoutes);//
-server.use(photosRoutes);
-// ..
+// // error handler
+// server.use(function(err, req, res, next) {
+//   // error: 
+// })
 
-// path
-server.use(function(req, res, next) {
-  res.json({ error: 404 })
-})
+// server.listen(configs.PORT, () => {
+//   console.log(`Server app listening at http://localhost:${configs.PORT}`)
+// })
 
-// error handler
-server.use(function(err, req, res, next) {
-  // error: 
-})
+// // do not use auth
+// GET /blog
 
-server.listen(configs.PORT, () => {
-  console.log(`Server app listening at http://localhost:${configs.PORT}`)
-})
+// // use auth
+// POST /account/user
+
+// // login 
+// // create token
+// // next time, && private route -> use token
+// // if valid ok next
+// // if no then error
+
+
+
+
+
+// // server.use(function(req, res, next) {
+// //   // check if the route is private
+// //   if (isPublicRoute) {
+// //     return next()
+// //   }
+
+// //   const token = req.headers.Authorization;
+
+// //   jwt.verify(token, SECRET, function(err, decoded) {
+// //     if (err) {
+// //       return next(err);
+// //     }
+
+// //     const { user_id } = decoded;
+
+// //     User.findById(user_id)
+// //       .then(user => {
+// //         req.user = user;
+// //         next();
+// //       });
+// //   });
+// // })
+
+var jwt = require('jsonwebtoken');
+
+
+var token = jwt.sign({ foo: 'bar' }, 'shhhhh', { expiresIn: '1h' });
+console.log(token)
+
+// general mid
+
+// public
+
+// auth mid
+
+// private routes
+
+// 404
 
